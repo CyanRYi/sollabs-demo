@@ -1,5 +1,5 @@
 ---
 type: tags
 name: philosophy
-title: 철학
+title: philosophy
 ---

@@ -1,5 +1,5 @@
 ---
 type: tags
 name: oss
-title: Open Source Software
+title: Open Source
 ---

@@ -1,5 +1,5 @@
 ---
 type: category
 name: oss
-title: Open Source Software
+title: Open Source
 ---
