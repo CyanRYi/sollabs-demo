@@ -8,10 +8,11 @@ layout: default
 <span class="time">{{ page.date | date_to_string }}</span>
 &raquo;
 {% if page.category %}
-    {% assign postCategory = site.category | where: 'name', page.category %}
-    {{ site.category }} - {{ site.category | where: 'name', page.category }}
-    <a href="{{ site.url }}{{ postCategory.url }}">{{ postCategory.title }}</a>
-    {{ postCategory.url }}
+    {% for c in site.category %}
+        {% if c.name == page.category %}
+            <a href="{{ site.url }}{{ postCategory.url }}">{{ postCategory.title }}</a>
+        {% endif %}
+    {% endfor %}
 {% endif %}
 {% capture refererUri %}{{ site.url }}{{ page.slug }}{% endcapture %}
 {% include fb_buttons.html %}
@@ -26,10 +27,13 @@ layout: default
     <span class="tags">
         {% assign isFirst = true %}
         {% for tag in page.tags %}
-            {% assign t = site.tag | where: 'name', tag %}
-            {% unless isFirst %}, {% endunless %}
-            <a href="{{ site.url }}/tag/{{ t.name }}" title="{{ t.title }}"> {{ t.title }} </a>
-            {% assign isFirst = false %}
+            {% for t in site.tag %}
+                {% if t.name == tag %}
+                    {% unless isFirst %}, {% endunless %}
+                        <a href="{{ site.url }}/{{ t.url }}" title="{{ t.title }}"> {{ t.title }} </a>
+                    {% assign isFirst = false %}
+                {% endif %}
+            {% endfor %}
         {% endfor %}
     </span>
 </div>
