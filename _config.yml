@@ -79,9 +79,6 @@ permalink: /:title
 collections:
   language:
     output: true
-  member:
-    output: true
-    permalink: /author/:name/
   tag:
     output: true
     permalink: /tag/:name/
