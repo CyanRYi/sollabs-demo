@@ -51,6 +51,12 @@ blockquote {
 blockquote::before, blockquote::after {
     content: "";
 }
+blockquote p {
+    margin: 0 0 10px;
+}
+blockquote p:last-child, blockquote ul:last-child, blockquote ol:last-child {
+    margin-bottom: 0;
+}
 footer {
     border-top: 1px solid #F7F1F1;
     width: 100%;
