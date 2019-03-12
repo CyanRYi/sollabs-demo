@@ -124,12 +124,6 @@ div.sidebar img.profile-avatar {
   margin-left: auto;
   margin-right: auto;
 }
-div.tags a {
-  background-color: #66afe9;
-  color: #000080;
-  font-size: 15px;
-  margin: 3px;
-}
 
 /* Pagination */
 .PageNavigation {
