@@ -13,7 +13,7 @@ layout: default
     <a href="{{ site.url }}{{ postCategory.permalink }}">{{ postCategory.title }}</a>
     {{ postCategory }}
 {% endif %}
-{% capture refererUri %}{{ site.url }}{{ page.url }}{% endcapture %}
+{% capture refererUri %}{{ site.url }}{{ page.slug }}{% endcapture %}
 {% include fb_buttons.html %}
 <hr/>
 <div class="content">
