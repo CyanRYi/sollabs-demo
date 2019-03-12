@@ -7,8 +7,8 @@ layout: default
 
 <span class="time">{{ page.date | date_to_string }}</span>
 &raquo;
-{{ page.category }} - {{ page.categories }}
 {% if page.category %}
+    {{ site.category.size }} - {{ size.category }}
     {% assign postCategory = site.category | where: 'name', page.category %}
     <a href="{{ site.url }}{{ postCategory.permalink }}">{{ postCategory.title }}</a>
     {{ postCategory }}
