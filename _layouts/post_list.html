@@ -15,8 +15,9 @@ layout: default
     <span class="mdl-chip__text">Category</span>
 </span>
 {% for cat in site.category %}
+{% assign checked =  page.type != 'category' or page.type == 'category' and page.name == cat.name %}
     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector-checkbox" for="category_{{ cat.name }}">
-        <input type="checkbox" id="category_{{ cat.name }}" class="mdl-checkbox__input" checked>
+        <input type="checkbox" id="category_{{ cat.name }}" class="mdl-checkbox__input" checked="{{ checked }}">
         <span class="mdl-checkbox__label">{{ cat.title }}</span>
     </label>
 {% endfor %}
@@ -31,7 +32,6 @@ layout: default
     </label>
 {% endfor %}
 <script src="{{ site.url }}/static/js/post-selector.js"></script>
-setDefault({{ page.type }}, {{ page.name }});
 <hr />
 <ul class="mdl-list">
     {% for post in site.posts %}
