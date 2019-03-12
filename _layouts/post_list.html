@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+    <script src="{{ site.url }}/static/js/post-selector.js"></script>
     <span class="mdl-chip post-selector-chip-label">
         <span class="mdl-chip__text">Language</span>
     </span>
@@ -26,7 +27,7 @@ layout: default
     </span>
     {% for tag in site.tag %}
         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector-checkbox" for="tag_{{ tag.name }}">
-            <input type="checkbox" id="tag_{{ tag.name }}" class="mdl-checkbox__input">
+            <input type="checkbox" id="tag_{{ tag.name }}" class="mdl-checkbox__input" checked>
             <span class="mdl-checkbox__label">{{ tag.title }}</span>
         </label>
     {% endfor %}
