@@ -31,16 +31,24 @@ layout: default
     <span class="mdl-chip__text">Tag</span>
 </span>
 {% for tag in site.tag %}
-    {% if page.type == 'tags' and page.name == tag.name %}
-        {% assign checked = 'checked'  %}
-    {% endif %}
     {% if page.type != 'tags' %}
-        {% assign checked = 'checked' %}
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector-checkbox" for="tag_{{ tag.name }}">
+            <input type="checkbox" id="tag_{{ tag.name }}" class="mdl-checkbox__input" checked>
+            <span class="mdl-checkbox__label">{{ tag.title }}</span>
+        </label>
+    {% else %}
+        {% if page.name == tag.name %}
+            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector-checkbox" for="tag_{{ tag.name }}">
+                <input type="checkbox" id="tag_{{ tag.name }}" class="mdl-checkbox__input" checked>
+                <span class="mdl-checkbox__label">{{ tag.title }}</span>
+            </label>
+        {% else %}
+            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector-checkbox" for="tag_{{ tag.name }}">
+                <input type="checkbox" id="tag_{{ tag.name }}" class="mdl-checkbox__input">
+                <span class="mdl-checkbox__label">{{ tag.title }}</span>
+            </label>
+        {% endif %}
     {% endif %}
-    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector-checkbox" for="tag_{{ tag.name }}">
-        <input type="checkbox" id="tag_{{ tag.name }}" class="mdl-checkbox__input" {{ checked }}>
-        <span class="mdl-checkbox__label">{{ tag.title }}</span>
-    </label>
 {% endfor %}
 <hr />
 <ul class="mdl-list">
