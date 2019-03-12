@@ -107,7 +107,7 @@ layout: compress
   <body>
   <div class="container">
       <div class="mdl-grid">
-          <div class="sidebar mdl-cell mdl-cell--1-offset-desktop mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone">
+          <div class="sidebar mdl-cell mdl-cell--2-offset-desktop mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone">
               <div class="language">
                   Language :
                   <a href="{{ site.url }}/ko">
@@ -128,7 +128,7 @@ layout: compress
                   <li><a href="{{ site.url}}">Home</a></li>
 
                   {% for i in site.urls %}
-                  <li><a class="about" href="{{ i.url }}">{{ i.text }}</a></li>
+                    <li><a class="about" href="{{ site.url}}{{ i.url }}">{{ i.text }}</a></li>
                   {% endfor %}
                   <hr/>
 
@@ -149,7 +149,7 @@ layout: compress
                   <ul class="search__results" id="js-search__results"></ul>
               </div>
           </div>
-          <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+          <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
               {{ content }}
               <footer>
                   &copy; {{ site.author }}
