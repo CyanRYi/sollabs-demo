@@ -2,6 +2,17 @@
 layout: default
 ---
 <div id="home">
+    Language :
+    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="language_all">
+        <input type="radio" id="language_all" class="mdl-radio__button" name="options" value="language_all" checked>
+        <span class="mdl-radio__label">All</span>
+    </label>
+    {% for lang in site.language %}
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="language_{{ lang.name }}">
+            <input type="radio" id="language_{{ lang.name }}" class="mdl-radio__button" name="options" value="language_{{ lang.name }}">
+            <img class="mdl-radio__label" src="{{ lang.image }}" />
+        </label>
+    {% endfor %}
     <hr />
     {% if page.language == 'all' %}
         <ul class="mdl-list">
