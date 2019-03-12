@@ -24,13 +24,10 @@ layout: default
     <span class="tags">
         {% assign isFirst = true %}
         {% for tag in page.tags %}
-            {% for t in site.tag %}
-                {% if t.name == tag %}
-                    {% unless isFirst %}, {% endunless %}
-                        <a href="{{ site.url }}/tag/{{ t.name }}" title="{{ t.title }}"> {{ t.title }} </a>
-                    {% assign isFirst = false %}
-                {% endif %}
-            {% endfor %}
+            {% assign t = site.tag | where: 'name', tag %}
+            {% unless isFirst %}, {% endunless %}
+            <a href="{{ site.url }}/tag/{{ t.name }}" title="{{ t.title }}"> {{ t.title }} </a>
+            {% assign isFirst = false %}
         {% endfor %}
     </span>
 </div>
