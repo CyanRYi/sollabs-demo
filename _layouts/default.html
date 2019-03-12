@@ -132,13 +132,13 @@ layout: compress
 
                   <strong>Category</strong>
                   {% for c in site.category %}
-                  <li><a class="about" href="{{ site.url}}/category/{{ c.name }}">{{ c.title }}</a></li>
+                    <li><a class="about" href="{{ site.url}}/{{ c.permalink }}">{{ c.title }}</a></li>
                   {% endfor %}
               </ul>
               <hr/>
               <div class="tags">
                   {% for t in site.tag %}
-                  <a href="{{ site.url}}/tag/{{ t.name }}" title="{{ t.title }}"><strong><i>{{ t.title }}</i></strong></a>
+                    <a href="{{ site.url}}/{{ t.permalink }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">{{ t.title }}</a>
                   {% endfor %}
               </div>
               <hr/>
