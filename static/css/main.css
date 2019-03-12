@@ -73,12 +73,7 @@ footer {
 .float-right {
   float: right;
 }
-/* Layout */
-.sidebar-nav {
-  margin: 0;
-  padding: 0;
-}
-.sidebar-nav li {
+/* Layout */ar-nav li {
   margin: 0;
   list-style: none;
 }
@@ -116,9 +111,6 @@ img.profile-avatar {
 .content img {
   max-width: 100%
 }
-.post-selector > .mdl-cell {
-    display: inline-block;
-}
-.post-selector .mdl-checkbox {
+.mdl-checkbox {
     width: 150px;
 }
