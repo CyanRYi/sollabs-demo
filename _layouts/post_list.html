@@ -2,11 +2,13 @@
 layout: default
 ---
 <div id="mdl-grid">
-    <div class="mdl-cell mdl-cell--1-col">
-        Language :
+    <div class="mdl-cell mdl-cell--2-col">
+        <span class="mdl-chip">
+            <span class="mdl-chip__text">Language</span>
+        </span>
     </div>
     {% for lang in site.language %}
-    <div class="mdl-cell mdl-cell--1-col">
+    <div class="mdl-cell mdl-cell--2-col">
         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector" for="language_{{ lang.name }}">
             <input type="checkbox" id="language_{{ lang.name }}" class="mdl-checkbox__input" checked>
             <span class="mdl-checkbox__label">{{ lang.title }}</span>
