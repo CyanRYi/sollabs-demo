@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+</header>
+
+<span class="time">{{ page.date | date_to_string }}</span>
+&raquo;
+{% if page.category %}
+    {% assign postCategory = site.category | where: 'name', page.category %}
+    <a href="{{ site.url }}/category/{{ postCategory.name }}">{{ postCategory.title }}</a>
+{% endif %}
+{% capture refererUri %}{{ site.url }}{{ page.url }}{% endcapture %}
+{% include fb_buttons.html %}
+<hr/>
+<div class="content">
+    <div class="post">{{ content }}</div>
+</div>
+<hr/>
+{% if page.tags %}
+<div>
+    Tags :
+    <span class="tags">
+        {% assign isFirst = true %}
+        {% for tag in page.tags %}
+            {% for t in site.tag %}
+                {% if t.name == tag %}
+                    {% unless isFirst %}, {% endunless %}
+                        <a href="{{ site.url }}/tag/{{ t.name }}" title="{{ t.title }}"> {{ t.title }} </a>
+                    {% assign isFirst = false %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </span>
+</div>
+{% endif %}
+<hr/>
+{% if site.facebook_app %}
+    <div class="fb-comments" data-href="{{ refererUri }}" data-width="700" data-numposts="10"></div>
+{% endif %}

@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<div id="home">
+    {%if page.type == 'language' %}
+        <hr />
+        <ul class="mdl-list">
+        {% for post in site.posts %}
+            {% if page.language == 'all' or page.language == post.language  %}
+                {% include post_link.html %}
+            {% endif %}
+        {% endfor %}
+        </ul>
+    {% else %}
+        <hr />
+        <ul class="mdl-list">
+        {% for post in site.posts %}
+            {% if post[page.type] contains page.name %}
+                {% include post_link.html %}
+            {% endif %}
+        {% endfor %}
+        </ul>
+    {% endif %}
+</div><!-- end #home -->

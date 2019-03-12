@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="{{ site.url }}/static/img/favicon.ico" />
+      <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.name }}</title>
+      <meta name="author" content="{{ site.manager }}" />
+      <meta name="description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.description }}{% endif %}" />
+
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+      <meta content="{{ site.name }}" property="og:site_name">
+
+      {% if page.noindex %}
+        <meta name="robots" content="noindex">
+      {% endif %}
+
+      {% if page.title %}
+        <meta content="{{ page.title }}" property="og:title">
+        <meta content="article" property="og:type">
+      {% else %}
+        <meta content="{{ site.name }}" property="og:title">
+        <meta content="website" property="og:type">
+      {% endif %}
+
+      {% if page.description %}
+        <meta content="{{ page.description }}" property="og:description">
+      {% else %}
+        <meta content="{{ site.description }}" property="og:description">
+      {% endif %}
+
+      {% if page.url %}
+        <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+      {% endif %}
+
+      {% if page.date %}
+        <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
+        <meta content="{{ site.url }}/about/" property="article:author">
+      {% endif %}
+
+      {% if page.image %}
+        <meta content="{{ site.url }}/images/posts/{{ page.image }}" property="og:image">
+      {% else %}
+        <meta content="{{ site.url }}{{ site.avatar }}" property="og:image">
+      {% endif %}
+
+      {% if page.categories %}
+        {% for category in page.categories limit:1 %}
+            <meta content="{{ category }}" property="article:section">
+        {% endfor %}
+      {% endif %}
+
+      {% capture pageTags %}{% endcapture %}
+
+      {% if page.tags %}
+        {% for tag in page.tags %}
+            {% for t in site.tags %}
+                {% if t.name == tag %}
+                    <meta content="{{ t.title }}" property="article:tag">
+                    {% capture pageTags %}{{t.title}}, {{pageTags}}{% endcapture %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+      {% endif %}
+
+      {% if page.title %}
+        <meta name="keywords" content="{{ page.title }},{{ pageTags }}" />
+      {% else %}
+        <meta name="keywords" content="dev, devloper, spring, oop, developer philosophy" />
+      {% endif %}
+
+      <!-- Font awesome icons -->
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+      <!-- syntax highlighting CSS -->
+      <link rel="stylesheet" href="{{ site.url }}/static/css/syntax.css">
+      <!-- Bootstrap core CSS -->
+      <link href="{{ site.url }}/static/css/material.min.css" rel="stylesheet">
+      <!-- Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="{{ site.url }}/static/css/super-search.css">
+      <link rel="stylesheet" href="{{ site.url }}/static/css/thickbox.css">
+      <link rel="stylesheet" href="{{ site.url }}/static/css/main.css">
+      <!-- FB header reference -->
+      {% if site.facebook_app %}
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId={{ site.facebook_app }}"></script>
+      {% endif %}
+
+      {% if site.google_analytics %}
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '{{ site.google_analytics }}');
+      </script>
+      {% endif %}
+
+  </head>
+  <body>
+  <div class="container">
+      <div class="mdl-grid">
+          <div class="sidebar mdl-cell mdl-cell--1-offset-desktop mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone">
+              <div class="language">
+                  Language :
+                  <a href="{{ site.url }}/ko">
+                      <img class="flag" src="{{ site.url }}/static/img/flag/kr.svg" alt="한국어" />
+                  </a>
+                  <a href="{{ site.url }}/en">
+                      <img class="flag" src="{{ site.url }}/static/img/flag/us.svg" alt="English" />
+                  </a>
+              </div>
+              <a href="{{ site.url}}"><img class="profile-avatar" src="{{ site.url }}{{ site.avatar }}" height="120px" width="160" /></a>
+              <h1 class="author-name">{{ site.manager }}</h1>
+              <div class="profile-about">
+                  {{ site.about }}
+              </div>
+              <hr />
+              <ul class="sidebar-nav">
+                  <strong>Navigation</strong>
+                  <li><a href="{{ site.url}}">Home</a></li>
+
+                  {% for i in site.urls %}
+                  <li><a class="about" href="{{ i.url }}">{{ i.text }}</a></li>
+                  {% endfor %}
+                  <hr/>
+
+                  <strong>Category</strong>
+                  {% for c in site.category %}
+                  <li><a class="about" href="{{ site.url}}/category/{{ c.name }}">{{ c.title }}</a></li>
+                  {% endfor %}
+              </ul>
+              <hr/>
+              <div class="tags">
+                  {% for t in site.tag %}
+                  <a href="{{ site.url}}/tag/{{ t.name }}" title="{{ t.title }}"><strong><i>{{ t.title }}</i></strong></a>
+                  {% endfor %}
+              </div>
+              <hr/>
+              <div class="search" id="js-search">
+                  <input class="mdl-textfield__input search__input" type="text" placeholder="type to search" id="js-search__input">
+                  <ul class="search__results" id="js-search__results"></ul>
+              </div>
+          </div>
+          <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              {{ content }}
+              <footer>
+                  &copy; {{ site.manager }}
+                  {% if site.github %}
+                  - <a href="{{ site.github }}">{{ site.github }}</a> - Powered by Jekyll.
+                  {% endif %}
+                  <div class="btn-github" style="float:right;">
+                      <iframe src="https://ghbtns.com/github-btn.html?user=cyanryi&repo=cyanryi.github.io&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+                      <iframe src="https://ghbtns.com/github-btn.html?user=cyanryi&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+                  </div>
+              </footer>
+          </div>
+      </div>
+    </div>
+    <script src="{{ site.url }}/static/js/material.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="{{ site.url }}/static/js/super-search.js"></script>
+    <script src="{{ site.url }}/static/js/thickbox-compressed.js"></script>
+  </body>
+</html>

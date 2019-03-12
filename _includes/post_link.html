@@ -1,0 +1,6 @@
+<li class="mdl-list__item">
+    {% assign useShareButton = false %}
+    <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a> &raquo; <i><span>{{ post.date | date_to_string }}</span></i>
+    {% capture refererUri %}{{ site.url }}{{ post.slug }}{% endcapture %}
+    {% include fb_buttons.html %}
+</li>
