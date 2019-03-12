@@ -1,34 +1,28 @@
-(function () {
-    var checkboxes = document.getElementsByClassName('mdl-checkbox__input');
+function togglePosts(id, checked) {
 
-    function togglePosts(id, checked) {
+    var posts = document.getElementsByClassName(id);
 
-        var posts = document.getElementsByClassName(id);
-
-        for(var j = 0; j < posts.length; j++) {
-            if (checked) {
-                posts[j].style.display = 'block';
-            } else {
-                posts[j].style.display = 'none';
-            }
+    for(var j = 0; j < posts.length; j++) {
+        if (checked) {
+            posts[j].style.display = 'block';
+        } else {
+            posts[j].style.display = 'none';
         }
     }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    var checkboxes = document.getElementsByClassName('mdl-checkbox__input');
 
     for(var i = 0; i < checkboxes.length; i++) {
-
         checkboxes[i].addEventListener('change', function() {
             togglePosts(this.id, this.checked);
         })
     }
+    var unchecked = document.querySelectorAll('input[type=checkbox]:not(:checked)');
 
-    function setDefault() {
-
-        var unchecked = document.querySelectorAll('input[type=checkbox]:not(:checked)');
-
-        for(var i = 0; i < unchecked.length; i++) {
-            togglePosts(unchecked[i].id, false);
-        }
+    for(var i = 0; i < unchecked.length; i++) {
+        togglePosts(unchecked[i].id, false);
     }
-
-    setDefault();
-})();
+});
