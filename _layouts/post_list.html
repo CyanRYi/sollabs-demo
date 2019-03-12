@@ -26,19 +26,9 @@ layout: default
     </label>
     {% endfor %}
     <hr />
-    {% if page.language == 'all' %}
-        <ul class="mdl-list">
-            {% for post in site.posts %}
-                {% include post_link.html %}
-            {% endfor %}
-        </ul>
-    {% else %}
-        <ul class="mdl-list">
-            {% for post in site.posts %}
-                {% if post[page.type] contains page.name %}
-                    {% include post_link.html %}
-                {% endif %}
-            {% endfor %}
-        </ul>
-    {% endif %}
+    <ul class="mdl-list">
+        {% for post in site.posts %}
+            {% include post_link.html %}
+        {% endfor %}
+    </ul>
 </div><!-- end #home -->
