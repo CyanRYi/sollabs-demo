@@ -4,14 +4,29 @@ layout: default
 <div id="home">
     Language :
     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="language_all">
-        <input type="radio" id="language_all" class="mdl-radio__button" name="options" value="language_all" checked>
+        <input type="radio" id="language_all" class="mdl-radio__button" name="language" value="language_all" checked>
         <span class="mdl-radio__label">All</span>
     </label>
     {% for lang in site.language %}
         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="language_{{ lang.name }}">
-            <input type="radio" id="language_{{ lang.name }}" class="mdl-radio__button" name="options" value="language_{{ lang.name }}">
-            <img class="mdl-radio__label" src="{{ lang.image }}" />
+            <input type="radio" id="language_{{ lang.name }}" class="mdl-radio__button" name="language" value="language_{{ lang.name }}">
+            <img class="mdl-radio__label" src="{{ site.url }}{{ lang.image }}" />
         </label>
+    {% endfor %}
+    <hr/>
+    Category :
+    {% for cat in site.category %}
+    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="category_{{ cat.name }}">
+        <input type="radio" id="category_{{ cat.name }}" class="mdl-radio__button" name="category" value="category_{{ cat.name }}">
+        <span class="mdl-radio__label">{{ cat.name }}</span>
+    </label>
+    {% endfor %}
+    <hr/>
+    {% for tag in site.tag %}
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="tag_{{ tag.name }}">
+        <input type="checkbox" id="tag_{{ tag.name }}" class="mdl-checkbox__input">
+        <span class="mdl-checkbox__label">{{ tag.name }}</span>
+    </label>
     {% endfor %}
     <hr />
     {% if page.language == 'all' %}
