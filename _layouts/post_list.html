@@ -1,31 +1,31 @@
 ---
 layout: default
 ---
-    <span class="mdl-chip">
+    <span class="mdl-chip post-selector-chip-label">
         <span class="mdl-chip__text">Language</span>
     </span>
     {% for lang in site.language %}
-        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector" for="language_{{ lang.name }}">
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector-checkbox" for="language_{{ lang.name }}">
             <input type="checkbox" id="language_{{ lang.name }}" class="mdl-checkbox__input" checked>
             <span class="mdl-checkbox__label">{{ lang.title }}</span>
         </label>
     {% endfor %}
     <hr/>
-    <span class="mdl-chip">
+    <span class="mdl-chip post-selector-chip-label">
         <span class="mdl-chip__text">Category</span>
     </span>
     {% for cat in site.category %}
-        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector" for="category_{{ cat.name }}">
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector-checkbox" for="category_{{ cat.name }}">
             <input type="checkbox" id="category_{{ cat.name }}" class="mdl-checkbox__input" checked>
             <span class="mdl-checkbox__label">{{ cat.title }}</span>
         </label>
     {% endfor %}
     <hr/>
-    <span class="mdl-chip">
+    <span class="mdl-chip post-selector-chip-label">
         <span class="mdl-chip__text">Tag</span>
     </span>
     {% for tag in site.tag %}
-        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector" for="tag_{{ tag.name }}">
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector-checkbox" for="tag_{{ tag.name }}">
             <input type="checkbox" id="tag_{{ tag.name }}" class="mdl-checkbox__input">
             <span class="mdl-checkbox__label">{{ tag.title }}</span>
         </label>

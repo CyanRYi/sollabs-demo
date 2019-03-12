@@ -111,6 +111,9 @@ img.profile-avatar {
 .content img {
   max-width: 100%
 }
-.post-selector {
+.post-selector-chip-label {
+    width: 120px;
+}
+.post-selector-checkbox {
     width: 150px;
 }
