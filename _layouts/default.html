@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="shortcut icon" href="{{ site.url }}/static/img/favicon.ico" />
       <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.name }}</title>
-      <meta name="author" content="{{ site.manager }}" />
+      <meta name="author" content="{{ site.author }}" />
       <meta name="description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.description }}{% endif %}" />
 
       <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
@@ -115,7 +115,7 @@
                   </a>
               </div>
               <a href="{{ site.url}}"><img class="profile-avatar" src="{{ site.url }}{{ site.avatar }}" height="120px" width="160" /></a>
-              <h1 class="author-name">{{ site.manager }}</h1>
+              <h1 class="author-name">{{ site.author }}</h1>
               <div class="profile-about">
                   {{ site.about }}
               </div>
@@ -149,7 +149,7 @@
           <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
               {{ content }}
               <footer>
-                  &copy; {{ site.manager }}
+                  &copy; {{ site.author }}
                   {% if site.github %}
                   - <a href="{{ site.github }}">{{ site.github }}</a> - Powered by Jekyll.
                   {% endif %}

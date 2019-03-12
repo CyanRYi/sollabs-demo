@@ -1,5 +1,5 @@
 ---
-type: author
+type: member
 name: sol
 title: Sol Yi
 ---
