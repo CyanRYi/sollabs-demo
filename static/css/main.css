@@ -119,3 +119,6 @@ img.profile-avatar {
 .post-selector .mdl-cell {
     display: inline-block;
 }
+.post-selector .mdl-checkbox {
+    width: 150px;
+}
