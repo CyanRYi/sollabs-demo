@@ -10,7 +10,7 @@ layout: default
 {% if page.category %}
     {% for c in site.category %}
         {% if c.name == page.category %}
-            <a href="{{ site.url }}{{ postCategory.url }}">{{ postCategory.title }}</a>
+            <a href="{{ site.url }}{{ c.url }}">{{ c.title }}</a>
         {% endif %}
     {% endfor %}
 {% endif %}
@@ -30,7 +30,7 @@ layout: default
             {% for t in site.tag %}
                 {% if t.name == tag %}
                     {% unless isFirst %}, {% endunless %}
-                        <a href="{{ site.url }}/{{ t.url }}" title="{{ t.title }}"> {{ t.title }} </a>
+                        <a href="{{ site.url }}{{ t.url }}" title="{{ t.title }}"> {{ t.title }} </a>
                     {% assign isFirst = false %}
                 {% endif %}
             {% endfor %}
