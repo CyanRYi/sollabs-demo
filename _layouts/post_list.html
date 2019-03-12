@@ -15,20 +15,20 @@ layout: default
     <span class="mdl-chip__text">Category</span>
 </span>
 {% for cat in site.category %}
-    {% if page.type != 'tags' %}
+    {% if page.type != 'category' %}
         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector-checkbox" for="category_{{ cat.name }}">
             <input type="checkbox" id="category_{{ cat.name }}" class="mdl-checkbox__input" checked>
             <span class="mdl-checkbox__label">{{ cat.title }}</span>
         </label>
     {% else %}
-        {% if page.name == tag.name %}
+        {% if page.name == cat.name %}
             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector-checkbox" for="category_{{ cat.name }}">
                 <input type="checkbox" id="category_{{ cat.name }}" class="mdl-checkbox__input" checked>
                 <span class="mdl-checkbox__label">{{ cat.title }}</span>
             </label>
         {% else %}
             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector-checkbox" for="category_{{ cat.name }}">
-                <input type="checkbox" id="category_{{ cat.name }}" class=>
+                <input type="checkbox" id="category_{{ cat.name }}" class="mdl-checkbox__input">
                 <span class="mdl-checkbox__label">{{ cat.title }}</span>
             </label>
         {% endif %}
