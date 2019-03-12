@@ -16,4 +16,18 @@
             }
         })
     }
+
+    function setDefault(pageType, pageName) {
+
+        if (pageType && pageName) {
+            var resetCheckboxes = document.querySelector('input[type=checkbox][id^=#tag_]');
+
+            for(var i = 0; i < resetCheckboxes.length; i++) {
+
+                if (resetCheckboxes[i].id !== 'tag_' + pageName) {
+                    resetCheckboxes[i].checked = false;
+                }
+            }
+        }
+    }
 })();
