@@ -152,3 +152,6 @@ div.sidebar img.profile-avatar {
 .content img {
   max-width: 100%
 }
+.post-selector>.mdl-cell {
+    display: inline-block;
+}

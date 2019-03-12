@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-<div id="mdl-grid">
-    <div class="mdl-cell mdl-cell--2-col">
+<div id="post-selector mdl-grid">
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
         <span class="mdl-chip">
             <span class="mdl-chip__text">Language</span>
         </span>
@@ -16,20 +16,32 @@ layout: default
     </div>
     {% endfor %}
     <hr/>
-    Category :
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
+        <span class="mdl-chip">
+            <span class="mdl-chip__text">Category</span>
+        </span>
+    </div>
     {% for cat in site.category %}
-    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector" for="category_{{ cat.name }}">
-        <input type="checkbox" id="category_{{ cat.name }}" class="mdl-checkbox__input" checked>
-        <span class="mdl-checkbox__label">{{ cat.title }}</span>
-    </label>
+    <div class="mdl-cell mdl-cell--2-col">
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector" for="category_{{ cat.name }}">
+            <input type="checkbox" id="category_{{ cat.name }}" class="mdl-checkbox__input" checked>
+            <span class="mdl-checkbox__label">{{ cat.title }}</span>
+        </label>
+    </div>
     {% endfor %}
     <hr/>
-    Tag : 
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
+        <span class="mdl-chip">
+            <span class="mdl-chip__text">Tag</span>
+        </span>
+    </div>
     {% for tag in site.tag %}
-    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector" for="tag_{{ tag.name }}">
-        <input type="checkbox" id="tag_{{ tag.name }}" class="mdl-checkbox__input">
-        <span class="mdl-checkbox__label">{{ tag.title }}</span>
-    </label>
+    <div class="mdl-cell mdl-cell--2-col">
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector" for="tag_{{ tag.name }}">
+            <input type="checkbox" id="tag_{{ tag.name }}" class="mdl-checkbox__input">
+            <span class="mdl-checkbox__label">{{ tag.title }}</span>
+        </label>
+    </div>
     {% endfor %}
     <hr />
     <ul class="mdl-list">
