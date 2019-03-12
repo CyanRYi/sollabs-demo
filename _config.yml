@@ -64,8 +64,7 @@ compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
   endings: all
-  ignore:
-    envs: ['development']
+  blanklines: true
 
 urls:
   - text: About Me
