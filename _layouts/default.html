@@ -133,17 +133,17 @@ layout: compress
 
                   <strong>Category</strong>
                   {% for c in site.category %}
-                    <li><a class="about" href="{{ site.url}}/{{ c.url }}">{{ c.title }}</a></li>
+                    <li><a class="about" href="{{ site.url}}{{ c.url }}">{{ c.title }}</a></li>
                   {% endfor %}
               </ul>
               <hr/>
               <div class="tags">
                   {% for t in site.tag %}
-                    <a href="{{ site.url}}/{{ t.url }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">{{ t.title }}</a>
+                    <a href="{{ site.url}}{{ t.url }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">{{ t.title }}</a>
                   {% endfor %}
               </div>
               <hr/>
-              <div class="mdl-textfield" id="js-search">
+              <div class="mdl-textfield mdl-textfield--floating-label" id="js-search">
                   <label class="mdl-button mdl-js-button mdl-button--icon" for="js-search__input">
                       <i class="material-icons">search</i>
                   </label>
