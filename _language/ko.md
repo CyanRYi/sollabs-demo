@@ -1,6 +1,5 @@
 ---
 type: language
+title : 한국어
 language: ko
-permalink: /ko
-image: /static/img/flag/kr.svg
 ---
