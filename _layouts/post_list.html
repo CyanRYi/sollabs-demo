@@ -1,13 +1,17 @@
 ---
 layout: default
 ---
-<div id="home">
-    Language :
+<div id="mdl-grid">
+    <div class="mdl-cell mdl-cell--1-col">
+        Language :
+    </div>
     {% for lang in site.language %}
-    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector" for="language_{{ lang.name }}">
-        <input type="checkbox" id="language_{{ lang.name }}" class="mdl-checkbox__input" checked>
-        <span class="mdl-checkbox__label">{{ lang.title }}</span>
-    </label>
+    <div class="mdl-cell mdl-cell--1-col">
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector" for="language_{{ lang.name }}">
+            <input type="checkbox" id="language_{{ lang.name }}" class="mdl-checkbox__input" checked>
+            <span class="mdl-checkbox__label">{{ lang.title }}</span>
+        </label>
+    </div>
     {% endfor %}
     <hr/>
     Category :
