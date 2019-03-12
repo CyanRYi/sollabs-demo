@@ -6,14 +6,14 @@
         console.log("target checkboxes : " + checkboxes.length);
         checkboxes[i].addEventListener('change', function() {
 
-            console.log(checkboxes[i] + 'changed ' + checkboxes[i].checked);
-            var posts = document.getElementsByClassName(checkboxes[i].id);
+            console.log(this + 'changed ' + this.checked);
+            var posts = document.getElementsByClassName(this.id);
 
             for(var j = 0; j < posts.length; j++) {
-                if (checkboxes[i].checked) {
-                    posts[j].style.visibility = 'visible';
+                if (this.checked) {
+                    posts[j].style.display = 'block';
                 } else {
-                    posts[j].style.visibility = 'hidden';
+                    posts[j].style.visibility = 'none';
                 }
             }
         })
