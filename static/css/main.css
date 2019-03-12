@@ -156,3 +156,8 @@ div.sidebar img.profile-avatar {
 .content img {
   max-width: 100%
 }
+
+.post-selector {
+    display: inline-block;
+    width: 23%;
+}

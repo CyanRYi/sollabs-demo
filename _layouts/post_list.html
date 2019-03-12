@@ -3,29 +3,26 @@ layout: default
 ---
 <div id="home">
     Language :
-    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="language_all">
-        <input type="radio" id="language_all" class="mdl-radio__button" name="language" value="language_all" checked>
-        <span class="mdl-radio__label">All</span>
-    </label>
     {% for lang in site.language %}
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="language_{{ lang.name }}">
-            <input type="radio" id="language_{{ lang.name }}" class="mdl-radio__button" name="language" value="language_{{ lang.name }}">
-            <img class="mdl-radio__label" src="{{ site.url }}{{ lang.image }}" />
-        </label>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector" for="language_{{ lang.name }}">
+        <input type="checkbox" id="language_{{ lang.name }}" class="mdl-checkbox__input" checked>
+        <span class="mdl-checkbox__label">{{ lang.name }}</span>
+    </label>
     {% endfor %}
     <hr/>
     Category :
     {% for cat in site.category %}
-    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="category_{{ cat.name }}">
-        <input type="radio" id="category_{{ cat.name }}" class="mdl-radio__button" name="category" value="category_{{ cat.name }}">
-        <span class="mdl-radio__label">{{ cat.name }}</span>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector" for="category_{{ cat.name }}">
+        <input type="checkbox" id="category_{{ cat.name }}" class="mdl-checkbox__input" checked>
+        <span class="mdl-checkbox__label">{{ cat.title }}</span>
     </label>
     {% endfor %}
     <hr/>
+    Tag : 
     {% for tag in site.tag %}
-    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="tag_{{ tag.name }}">
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector" for="tag_{{ tag.name }}">
         <input type="checkbox" id="tag_{{ tag.name }}" class="mdl-checkbox__input">
-        <span class="mdl-checkbox__label">{{ tag.name }}</span>
+        <span class="mdl-checkbox__label">{{ tag.title }}</span>
     </label>
     {% endfor %}
     <hr />
