@@ -7,9 +7,11 @@ layout: default
 
 <span class="time">{{ page.date | date_to_string }}</span>
 &raquo;
+{{ page.category }} - {{ page.categories }}
 {% if page.category %}
     {% assign postCategory = site.category | where: 'name', page.category %}
-    <a href="{{ site.url }}/category/{{ postCategory.name }}">{{ postCategory.title }}</a>
+    <a href="{{ site.url }}{{ postCategory.permalink }}">{{ postCategory.title }}</a>
+    {{ postCategory }}
 {% endif %}
 {% capture refererUri %}{{ site.url }}{{ page.url }}{% endcapture %}
 {% include fb_buttons.html %}
