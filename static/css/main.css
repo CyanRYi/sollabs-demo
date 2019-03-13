@@ -118,16 +118,18 @@ img.profile-avatar {
     border: none;
 }
 /* search css */
-input#search__input {
+#js-search {
     width: 500px;
+}
+input#search__input {
+    width: 400px;
     display: inline-block;
 }
 div#search__outline {
     overflow: visible;
     position: relative;
     z-index: 989;
-    background: white;
-    width: 400px;
+    width: 500px;
     display: flex;
 }
 ul#search__results {
@@ -136,6 +138,9 @@ ul#search__results {
     padding: 0;
     overflow-x: hidden;
     transition: 0.2s ease;
+    width: 100%;
+    position: absolute;
+    background: white;
 }
 #search__results.is-hidden {
     opacity: 0;
@@ -155,6 +160,7 @@ ul#search__results {
 }
 .search__result-date {
     color: #BBB;
+    position: absolute;
     right: 12px;
 }
 .search.is-active {
