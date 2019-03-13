@@ -2,16 +2,16 @@
 layout: default
 ---
 <header class="post-header">
-    <h2 class="post-title">Articles by Tag: {{ page.title }}</h2>
+    <h1 class="post-title">Articles by Tag: {{ page.title }}</h1>
 </header>
 <div class="post-content">
     {% for tag in site.tag %}
         {% if page.name == tag.name %}
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" disabled>
-                {{ tag.title }}
-            </button>
+            <span class="mdl-chip">
+                <span class="mdl-chip__text">{{ tag.title }}</span>
+            </span>
         {% else %}
-            <a href="{{ site.url}}{{ tag.url }}" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+            <a href="{{ site.url}}{{ tag.url }}" class="mdl-chip tag-button">
                 <span class="mdl-chip__text">{{ tag.title }}</span>
             </a>
         {% endif %}

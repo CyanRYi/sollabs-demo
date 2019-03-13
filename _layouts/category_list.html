@@ -2,16 +2,16 @@
 layout: default
 ---
 <header class="post-header">
-    <h2 class="post-title">Articles by Category: {{ page.title }}</h2>
+    <h1 class="post-title">Articles by Category: {{ page.title }}</h1>
 </header>
 <div class="post-content">
     {% for category in site.category %}
         {% if page.name == category.name %}
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" disabled>
-                {{ category.title }}
-            </button>
+            <span class="mdl-chip">
+                <span class="mdl-chip__text">{{ category.title }}</span>
+            </span>
         {% else %}
-            <a href="{{ site.url}}{{ category.url }}" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+            <a href="{{ site.url}}{{ category.url }}" class="mdl-chip tag-button">
                 <span class="mdl-chip__text">{{ category.title }}</span>
             </a>
         {% endif %}
