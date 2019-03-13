@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
         togglePosts(unchecked[i].id, false);
     }
 
-    var checked = document.querySelectorAll('input[type=checkbox]::checked');
+    var checked = document.querySelectorAll('input[type=checkbox]:checked');
 
     for(var i = 0; i < checked.length; i++) {
         togglePosts(checked[i].id, true);
