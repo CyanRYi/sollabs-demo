@@ -110,6 +110,9 @@ div.content pre {
 .content img {
   max-width: 100%
 }
+.post-content ul li span::before {
+    content: "»";
+}
 .post-content .mdl-chip {
     margin: 0 3px 0 3px;
 }
@@ -184,12 +187,20 @@ ul#search__results {
         padding: 50px;
     }
 }
-
 @media (max-width: 839px) and (min-width: 480px) {
     div.profile, div.nav {
         padding: 30px;
         width: 40%;
         display: inline-block;
+    }
+    .post-content ul li {
+
+    }
+    .post-content ul li a {
+
+    }
+    .post-content ul li span {
+
     }
 }
 @media (max-width: 479px) {
