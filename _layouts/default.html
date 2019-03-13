@@ -73,8 +73,6 @@ layout: compress
         <meta name="keywords" content="dev, devloper, spring, oop, developer philosophy" />
       {% endif %}
 
-      <link rel="stylesheet" href="{{ site.url }}/static/css/super-search.css">
-      <link rel="stylesheet" href="{{ site.url }}/static/css/thickbox.css">
       <!-- syntax highlighting CSS -->
       <link rel="stylesheet" href="{{ site.url }}/static/css/syntax.css">
       <!-- Material-design-lite CSS, icon -->
@@ -101,7 +99,6 @@ layout: compress
           gtag('config', '{{ site.google_analytics }}');
       </script>
       {% endif %}
-
   </head>
   <body>
       <main class="mdl-layout__content">
@@ -123,13 +120,13 @@ layout: compress
                       </ul>
                   </div>
                   <div class="mdl-cell mdl-cell--8-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
-                      <div class="mdl-textfield mdl-js-textfield">
+                      <div class="mdl-textfield mdl-js-textfield search" id="js-search">
                           <i class="material-icons">search</i>
-                          <input class="mdl-textfield__input search__input" type="text" placeholder="Type to search" id="js-search__input">
-                          <div id="js-search__outline" class="search__results">
-                              <ul class="search__results" id="js-search__results"></ul>
+                          <input class="mdl-textfield__input" type="text" placeholder="Type to search" id="search__input">
+                          <i class="material-icons" id="search__clear">clear</i>
+                          <div id="search__outline" class="search__results">
+                              <ul class="search__results" id="search__results"></ul>
                           </div>
-
                       </div>
                       <hr/>
                       {{ content }}
