@@ -120,6 +120,17 @@ div.content pre {
     background-color: #0d47a1;
     color: #e0f2f1;
 }
+.mdl-menu {
+    width: 160px;
+}
+.mdl-list__item-primary-content {
+    display: inline-block;
+    width: 100px;
+}
+.mdl-list__item-secondary-action {
+    display: inline-block;
+    width: 50px;
+}
 .btn-github iframe {
     display: inline-block;
     width: 150px;
