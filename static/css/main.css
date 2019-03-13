@@ -121,3 +121,9 @@ input#js-search__input {
     width: auto;
     display: inline-block;
 }
+#js-search__outline {
+    overflow: visible;
+    position: absolute;
+    background: white;
+    width: 400px;
+}
