@@ -77,11 +77,23 @@ function getMatchedPosts(param) {
     }
 }
 
+var searchInputEl = document.getElementById('search__input'),
+    searchResultsOutline = document.getElementById('search__outline');
+
+function resetComponent() {
+    searchInputEl.value = '';
+    document.getElementById('js-search').classList.remove('is-active')
+    closeComponent();
+}
+
+function closeComponent() {
+    lastSearchResultHash = '';
+    searchResultsOutline.classList.add('is-hidden');
+}
+
+resetComponent();
+
 (function () {
-
-    var searchInputEl = document.getElementById('search__input'),
-        searchResultsOutline = document.getElementById('search__outline');
-
     document.getElementById('search__clear')
         .addEventListener('click', resetComponent);
 
@@ -121,16 +133,4 @@ function getMatchedPosts(param) {
         }
         lastSearchResultHash = currentResultHash;
     });
-
-    function resetComponent() {
-        searchInputEl.value = '';
-        document.getElementById('js-search').classList.remove('is-active')
-        closeComponent();
-    }
-
-    function closeComponent() {
-        lastSearchResultHash = '';
-        searchResultsOutline.classList.add('is-hidden');
-    }
-
 })();
