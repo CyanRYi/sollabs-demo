@@ -8,7 +8,7 @@ layout: default
     {% for tag in site.tag %}
         {% if page.name == tag.name %}
             <span class="mdl-chip">
-                <span class="mdl-chip__text">{{ tag.title }}</span>
+                <span class="mdl-chip__text"><strong>{{ tag.title }}</strong></span>
             </span>
         {% else %}
             <a href="{{ site.url}}{{ tag.url }}" class="mdl-chip tag-button">

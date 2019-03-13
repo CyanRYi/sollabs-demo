@@ -8,7 +8,7 @@ layout: default
     {% for category in site.category %}
         {% if page.name == category.name %}
             <span class="mdl-chip">
-                <span class="mdl-chip__text">{{ category.title }}</span>
+                <span class="mdl-chip__text"><strong>{{ category.title }}</strong></span>
             </span>
         {% else %}
             <a href="{{ site.url}}{{ category.url }}" class="mdl-chip tag-button">
