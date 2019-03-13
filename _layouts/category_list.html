@@ -1,22 +1,13 @@
 ---
 layout: default
 ---
-<span class="mdl-chip post-selector-chip-label">
-    <span class="mdl-chip__text">Language</span>
-</span>
-{% for lang in site.language %}
-    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector-checkbox" for="language_{{ lang.name }}">
-        <input type="checkbox" id="language_{{ lang.name }}" class="mdl-checkbox__input" checked>
-        <span class="mdl-checkbox__label">{{ lang.title }}</span>
-    </label>
-{% endfor %}
 {% for category in site.category %}
     {% if page.name == category.name %}
-        <a type="button" class="mdl-chip" disabled>
-            <span class="mdl-chip__text">{{ category.title }}</span>
-        </a>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" disabled>
+            {{ category.title }}
+        </button>
     {% else %}
-        <a type="button" class="mdl-chip mdl-button--colored">
+        <a href="{{ site.url}}{{ tag.url }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
             <span class="mdl-chip__text">{{ category.title }}</span>
         </a>
     {% endif %}
