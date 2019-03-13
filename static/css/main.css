@@ -194,13 +194,13 @@ ul#search__results {
         display: inline-block;
     }
     .post-content ul li {
-
+        display: inline-block;
     }
     .post-content ul li a {
 
     }
     .post-content ul li span {
-
+        float: right;
     }
 }
 @media (max-width: 479px) {
@@ -208,5 +208,11 @@ ul#search__results {
         padding: 10px;
         width: 40%;
         display: inline-block;
+    }
+    .post-content ul li {
+        display: inline-block;
+    }
+    .post-content ul li span {
+        float: right;
     }
 }
