@@ -112,13 +112,6 @@ img.profile-avatar {
 .content img {
   max-width: 100%
 }
-.post-selector-chip-label {
-    width: 120px;
-}
-.post-selector-checkbox {
-    margin-left: 20px;
-    width: auto;
-}
 .btn-github iframe {
     display: inline-block;
     width: 150px;

@@ -1,15 +1,6 @@
 ---
 layout: default
 ---
-<span class="mdl-chip post-selector-chip-label">
-    <span class="mdl-chip__text">Language</span>
-</span>
-{% for lang in site.language %}
-    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect post-selector-checkbox" for="language_{{ lang.name }}">
-        <input type="checkbox" id="language_{{ lang.name }}" class="mdl-checkbox__input" checked>
-        <span class="mdl-checkbox__label">{{ lang.title }}</span>
-    </label>
-{% endfor %}
 <hr/>
 <ul class="mdl-list">
     {% for post in site.posts %}
