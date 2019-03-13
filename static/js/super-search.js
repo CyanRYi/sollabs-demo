@@ -80,28 +80,11 @@ function getMatchedPosts(param) {
 
 (function () {
 
-    var searchEl = document.getElementById('js-search'),
-        searchInputEl = document.getElementById('search__input'),
-        searchResultsEl = document.getElementById('search__results'),
-        searchResultsOutline = document.getElementById('search__outline'),
-        searchClearEl = document.getElementById('search__clear');
+    var searchInputEl = document.getElementById('search__input'),
+        searchResultsOutline = document.getElementById('search__outline');
 
-    /*window.toggleSearch = function toggleSearch() {
-        //_gaq.push(['_trackEvent', 'supersearch', searchEl.classList.contains('is-active')]);
-        searchEl.classList.toggle('is-active');
-        if (searchEl.classList.contains('is-active')) {
-            // while opening
-            searchInputEl.value = '';
-        } else {
-            // while closing
-            searchResultsEl.classList.add('is-hidden');
-        }
-        setTimeout(function () {
-            searchInputEl.focus();
-        }, 210);
-    }*/
-
-    searchClearEl.addEventListener('click', resetComponent);
+    document.getElementById('search__clear')
+        .addEventListener('click', resetComponent);
 
     window.addEventListener('keyup', function onKeyPress(e) {
         if (e.which === 27) {
@@ -132,11 +115,9 @@ function getMatchedPosts(param) {
 
         var currentResultHash = matchingPosts.reduce(function(hash, post) { return post.title + hash; }, '');
         if (currentResultHash !== lastSearchResultHash) {
-            searchResultsEl.classList.remove('is-hidden');
             searchResultsOutline.classList.remove('is-hidden');
-            searchResultsEl.innerHTML = matchingPosts.map(function (post) {
-                var d = new Date(post.pubDate);
-                return '<li><a href="' + post.link + '">' + post.title + '<span class="search__result-date">' + d.toUTCString().replace(/.*(\d{2})\s+(\w{3})\s+(\d{4}).*/,'$2 $1, $3') + '</span></a></li>';
+            document.getElementById('search__results').innerHTML = matchingPosts.map(function (post) {
+                return '<li><a href="' + post.link + '">' + post.title + '<span class="search__result-date">' + new Date(post.pubDate).toUTCString().replace(/.*(\d{2})\s+(\w{3})\s+(\d{4}).*/,'$2 $1, $3') + '</span></a></li>';
             }).join('');
         }
         lastSearchResultHash = currentResultHash;
@@ -144,13 +125,12 @@ function getMatchedPosts(param) {
 
     function resetComponent() {
         searchInputEl.value = '';
-        searchEl.classList.remove('is-active')
+        document.getElementById('js-search').classList.remove('is-active')
         closeComponent();
     }
 
     function closeComponent() {
         lastSearchResultHash = '';
-        searchResultsEl.classList.add('is-hidden');
         searchResultsOutline.classList.add('is-hidden');
     }
 

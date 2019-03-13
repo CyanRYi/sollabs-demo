@@ -145,7 +145,7 @@ ul#search__results {
     background: white;
     margin-block-start: 0em;
 }
-#search__results.is-hidden {
+#search__outline.is-hidden {
     opacity: 0;
     transform: translateY(-1vh);
     display: none;
