@@ -126,8 +126,6 @@ input#search__input {
     display: inline-block;
 }
 div#search__outline {
-    border: 1px solid #080808;
-    border-radius: 0 0 15px 15px;
     overflow: visible;
     position: relative;
     z-index: 989;
@@ -135,6 +133,8 @@ div#search__outline {
     display: flex;
 }
 ul#search__results {
+    border: 1px solid #080808;
+    border-radius: 0 0 15px 15px;
     list-style: none;
     flex: auto;
     padding: 0;
