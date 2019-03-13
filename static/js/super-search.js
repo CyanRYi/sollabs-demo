@@ -1,8 +1,3 @@
-/*  Super Search
-    Author: Kushagra Gour (http://kushagragour.in)
-    MIT Licensed
-*/
-
 // Changes XML to JSON
 // Modified version from here: http://davidwalsh.name/convert-xml-json
 function xmlToJson(xml) {
@@ -91,7 +86,7 @@ function getMatchedPosts(param) {
         searchResultsOutline = document.getElementById('search__outline'),
         searchClearEl = document.getElementById('search__clear');
 
-    window.toggleSearch = function toggleSearch() {
+    /*window.toggleSearch = function toggleSearch() {
         //_gaq.push(['_trackEvent', 'supersearch', searchEl.classList.contains('is-active')]);
         searchEl.classList.toggle('is-active');
         if (searchEl.classList.contains('is-active')) {
@@ -104,34 +99,34 @@ function getMatchedPosts(param) {
         setTimeout(function () {
             searchInputEl.focus();
         }, 210);
-    }
+    }*/
+
+    searchClearEl.addEventListener('click', resetComponent);
 
     window.addEventListener('keyup', function onKeyPress(e) {
         if (e.which === 27) {
-            toggleSearch();
+            resetComponent();
         }
     });
-    window.addEventListener('keypress', function onKeyPress(e) {
-        if (e.which === 47 && !searchEl.classList.contains('is-active')) {
-            toggleSearch();
-        }
-    });
-
-    searchClearEl.addEventListener('click', resetComponent);
 
     var lastSearchResultHash = '';
     searchInputEl.addEventListener('input', function onInputChange() {
         var currentInputValue = (searchInputEl.value + '').toLowerCase();
-        if (currentInputValue.length < 3) {
+
+        if (currentInputValue.length === 0) {
             resetComponent();
+            return;
+        }
+
+        if (currentInputValue.length < 3) {
+            closeComponent();
             return;
         }
 
         var matchingPosts = getMatchedPosts(currentInputValue);
 
-        console.log(matchingPosts);
         if (matchingPosts.length === 0) {
-            resetComponent();
+            closeComponent();
             return;
         }
 
@@ -148,6 +143,12 @@ function getMatchedPosts(param) {
     });
 
     function resetComponent() {
+        searchInputEl.value = '';
+        searchEl.classList.remove('is-active')
+        closeComponent();
+    }
+
+    function closeComponent() {
         lastSearchResultHash = '';
         searchResultsEl.classList.add('is-hidden');
         searchResultsOutline.classList.add('is-hidden');
