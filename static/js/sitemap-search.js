@@ -54,7 +54,6 @@ xmlhttp.onreadystatechange = function () {
     node = node.children[0];
     contents = xmlToJson(node).channel.item;
 
-    console.log(contents);
     if (contents.title !== undefined) {
         contents = [contents];
     }
