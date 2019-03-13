@@ -48,48 +48,42 @@ function xmlToJson(xml) {
     return obj;
 }
 
-var posts = {
+var contents = [];
 
-    // get all post list from sitemap
-    init: function() {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET","/sitemap.xml");
-        xmlhttp.onreadystatechange = function () {
-            if (xmlhttp.readyState != 4) return;
-            if (xmlhttp.status != 200 && xmlhttp.status != 304) { return; }
-            var node = (new DOMParser).parseFromString(xmlhttp.responseText, 'text/xml');
-            node = node.children[0];
-            this.contents = xmlToJson(node).channel.item;
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET","/sitemap.xml");
+xmlhttp.onreadystatechange = function () {
+    if (xmlhttp.readyState != 4) return;
+    if (xmlhttp.status != 200 && xmlhttp.status != 304) { return; }
+    var node = (new DOMParser).parseFromString(xmlhttp.responseText, 'text/xml');
+    node = node.children[0];
+    this.contents = xmlToJson(node).channel.item;
 
-            console.log(posts);
-            if (contents.title !== undefined) {
-                this.contents = [this.contents];
-            }
-        }
-        xmlhttp.send();
-    },
-
-    getMatchedPosts: function(param) {
-        var result = contents.filter(function (post) {
-            if (post.title.toLowerCase().indexOf(param) !== -1
-                || post.description.toLowerCase().indexOf(param) !== -1) {
-                return true;
-            }
-        });
-
-        if (!result) {
-            return;
-        } else if (result.title !== undefined) {
-            return [result];
-        } else {
-            return result;
-        }
+    console.log(contents);
+    if (contents.title !== undefined) {
+        this.contents = [this.contents];
     }
-};
+}
+xmlhttp.send();
+
+function getMatchedPosts(param) {
+    var result = contents.filter(function (post) {
+        if (post.title.toLowerCase().indexOf(param) !== -1
+            || post.description.toLowerCase().indexOf(param) !== -1) {
+            return true;
+        }
+    });
+
+    if (!result) {
+        return;
+    } else if (result.title !== undefined) {
+        return [result];
+    } else {
+        return result;
+    }
+}
 
 (function () {
-
-    var postContainer = Object.create(posts);
 
     var searchEl = document.getElementById('js-search'),
         searchInputEl = document.getElementById('search__input'),
@@ -133,7 +127,7 @@ var posts = {
             return;
         }
 
-        var matchingPosts = postContainer.getMatchedPosts(currentInputValue);
+        var matchingPosts = getMatchedPosts(currentInputValue);
 
         console.log(matchingPosts);
         if (matchingPosts.length === 0) {
