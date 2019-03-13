@@ -127,8 +127,10 @@ img.profile-avatar {
 /* search css */
 #js-search {
     width: 500px;
+    max-width: 100%;
 }
 input#search__input {
+    max-width: calc(100% - 24px);
     width: 400px;
     display: inline-block;
 }
@@ -136,6 +138,7 @@ div#search__outline {
     overflow: visible;
     position: relative;
     z-index: 989;
+    max-width: calc(100% - 24px);
     width: 400px;
     display: flex;
 }
