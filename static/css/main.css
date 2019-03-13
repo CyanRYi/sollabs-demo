@@ -188,14 +188,14 @@ ul#search__results {
 @media (max-width: 839px) and (min-width: 480px) {
     div.profile, div.nav {
         padding: 30px;
-        width: 45%;
+        width: 40%;
         display: inline-block;
     }
 }
 @media (max-width: 479px) {
     div.profile, div.nav {
         padding: 10px;
-        width: 45%;
+        width: 40%;
         display: inline-block;
     }
 }
