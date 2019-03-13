@@ -121,6 +121,10 @@ img.profile-avatar {
 }
 .btn-github iframe {
     display: inline-block;
-    width: auto;
+    width: 150px;
     border: none;
+}
+input#js-search__input {
+    width: auto;
+    display: inline-block;
 }
