@@ -6,9 +6,9 @@
 (function () {
     var isSearchOpen = false,
         searchEl = document.querySelector('#js-search'),
-        searchInputEl = document.querySelector('#js-search__input'),
-        searchResultsEl = document.querySelector('#js-search__results'),
-        searchResultsOutline = document.querySelector('#js-search__outline'),
+        searchInputEl = document.querySelector('#search__input'),
+        searchResultsEl = document.querySelector('#search__results'),
+        searchResultsOutline = document.querySelector('#search__outline'),
         currentInputValue = '',
         lastSearchResultHash,
         posts = [];
