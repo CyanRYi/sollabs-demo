@@ -1,4 +1,4 @@
-{% capture selector %}language_{{ post.language }} category_{{ post.category }}{% for t in post.tags %} tag_{{ t }}{% endfor %}{% endcapture %}
+{% capture selector %}language_{{ post.language }}{% endcapture %}
 <li class="mdl-list__item {{ selector }}">
     {% assign useShareButton = false %}
     <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
