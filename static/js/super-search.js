@@ -57,11 +57,11 @@ xmlhttp.onreadystatechange = function () {
     if (xmlhttp.status != 200 && xmlhttp.status != 304) { return; }
     var node = (new DOMParser).parseFromString(xmlhttp.responseText, 'text/xml');
     node = node.children[0];
-    this.contents = xmlToJson(node).channel.item;
+    contents = xmlToJson(node).channel.item;
 
     console.log(contents);
     if (contents.title !== undefined) {
-        this.contents = [this.contents];
+        contents = [contents];
     }
 }
 xmlhttp.send();
