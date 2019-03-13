@@ -181,16 +181,17 @@ ul#search__results {
 @media (min-width: 840px) {
     div.profile, div.nav {
         width: 100%;
+        margin-left: 50px;
     }
 }
 
 @media (max-width: 839px) and (min-width: 480px) {
     div.profile, div.nav {
-        width: 50%;
+        width: 45%;
     }
 }
 @media (max-width: 479px) {
     div.profile, div.nav {
-        width: 50%;
+        width: 45%;
     }
 }
