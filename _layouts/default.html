@@ -108,16 +108,6 @@ layout: compress
           <header class="mdl-layout__header mdl-layout__header--scroll">
               <div class="mdl-layout__header-row">
                   <div class="mdl-layout-spacer"></div>
-                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                      mdl-textfield--floating-label mdl-textfield--align-right">
-                      <label class="mdl-button mdl-js-button mdl-button--icon" for="js-search__input">
-                          <i class="material-icons">search</i>
-                      </label>
-                      <div class="mdl-textfield__expandable-holder">
-                          <input class="mdl-textfield__input search__input" type="text" placeholder="type to search" id="js-search__input">
-                          <ul class="search__results" id="js-search__results"></ul>
-                      </div>
-                  </div>
               </div>
           </header>
           <div class="mdl-layout__drawer">
@@ -139,6 +129,15 @@ layout: compress
               <div class="page-content">
                   <div class="mdl-grid">
                       <div class="mdl-cell mdl-cell--2-offset-desktop mdl-cell--8-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+                              <label class="mdl-button mdl-js-button mdl-button--icon" for="js-search__input">
+                                  <i class="material-icons">search</i>
+                              </label>
+                              <div class="mdl-textfield__expandable-holder">
+                                  <input class="mdl-textfield__input search__input" type="text" placeholder="type to search" id="js-search__input">
+                                  <ul class="search__results" id="js-search__results"></ul>
+                              </div>
+                          </div>
                           {{ content }}
                           <footer>
                               &copy; {{ site.author }}
