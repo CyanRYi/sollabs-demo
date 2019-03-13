@@ -123,14 +123,6 @@ div.content pre {
 .mdl-menu {
     width: 160px;
 }
-.mdl-list__item-primary-content {
-    display: inline-block;
-    width: 100px;
-}
-.mdl-list__item-secondary-action {
-    display: inline-block;
-    width: 50px;
-}
 .btn-github iframe {
     display: inline-block;
     width: 150px;
