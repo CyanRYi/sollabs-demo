@@ -73,8 +73,17 @@ footer {
 .float-right {
   float: right;
 }
-/* Layout */
-.sidebar-nav ul {
+/* Left column */
+img.profile-avatar {
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    -ms-border-radius: 150px;
+    -o-border-radius: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul.sidebar-nav {
     padding-inline-start: 0px;
 }
 .sidebar-nav li {
@@ -95,16 +104,6 @@ div.content pre {
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: 12px;
   border: none;
-}
-/* Left column */
-img.profile-avatar {
-  border-radius: 150px;
-  -webkit-border-radius: 150px;
-  -moz-border-radius: 150px;
-  -ms-border-radius: 150px;
-  -o-border-radius: 150px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .post-content img,
