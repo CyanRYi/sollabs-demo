@@ -11,6 +11,12 @@ layout: default
     </label>
 {% endfor %}
 <hr/>
+<ul class="mdl-list">
+    {% for post in site.posts %}
+        {% include post_link.html %}
+    {% endfor %}
+</ul>
+
 <span class="mdl-chip post-selector-chip-label">
     <span class="mdl-chip__text">Category</span>
 </span>
@@ -59,9 +65,5 @@ layout: default
     {% endif %}
 {% endfor %}
 <hr />
-<ul class="mdl-list">
-    {% for post in site.posts %}
-        {% include post_link.html %}
-    {% endfor %}
-</ul>
+
 <script src="{{ site.url }}/static/js/post-selector.js"></script>
