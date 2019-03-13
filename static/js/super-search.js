@@ -8,6 +8,7 @@
         searchEl = document.querySelector('#js-search'),
         searchInputEl = document.querySelector('#js-search__input'),
         searchResultsEl = document.querySelector('#js-search__results'),
+        searchResultsOutline = document.querySelector('#js-search__outline'),
         currentInputValue = '',
         lastSearchResultHash,
         posts = [];
@@ -124,10 +125,12 @@
         }
         if (!matchingPosts.length) {
             searchResultsEl.classList.add('is-hidden');
+            searchResultsOutline.classList.add('is-hidden');
         }
         currentResultHash = matchingPosts.reduce(function(hash, post) { return post.title + hash; }, '');
         if (matchingPosts.length && currentResultHash !== lastSearchResultHash) {
             searchResultsEl.classList.remove('is-hidden');
+            searchResultsOutline.classList.remove('is-hidden');
             searchResultsEl.innerHTML = matchingPosts.map(function (post) {
                 d = new Date(post.pubDate);
                 return '<li><a href="' + post.link + '">' + post.title + '<span class="search__result-date">' + d.toUTCString().replace(/.*(\d{2})\s+(\w{3})\s+(\d{4}).*/,'$2 $1, $3') + '</span></a></li>';
