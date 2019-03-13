@@ -1,32 +1,32 @@
 ---
 layout: default
 ---
-<button id="selectLanguage" class="mdl-button mdl-js-button mdl-button--icon">
+<button id="selectLanguage" class="mdl-button mdl-js-button mdl-button--icon float-right">
     <i class="material-icons">translate</i>
 </button>
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-list" for="selectLanguage">
-    <li class="mdl-menu__item mdl-list__item">
+<div class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-list" for="selectLanguage">
+    <div class="mdl-menu__item mdl-list__item">
         <span class="mdl-list__item-primary-content">한국어</span>
         <span class="mdl-list__item-secondary-action">
             <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="language_ko">
                 <input type="checkbox" id="language_ko" class="mdl-switch__input" checked />
             </label>
         </span>
-    </li>
-    <li class="mdl-menu__item mdl-list__item">
+    </div>
+    <div class="mdl-menu__item mdl-list__item">
         <span class="mdl-list__item-primary-content">English</span>
         <span class="mdl-list__item-secondary-action">
             <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="language_en">
                 <input type="checkbox" id="language_en" class="mdl-switch__input" checked />
             </label>
         </span>
-    </li>
-</ul>
+    </div>
+</div>
 <div class="post-content">
-    <ul class="mdl-list">
+    <div class="mdl-list">
         {% for post in site.posts %}
             {% include post_link.html %}
         {% endfor %}
-    </ul>
+    </div>
 </div>
 <script src="{{ site.url }}/static/js/post-selector.js"></script>

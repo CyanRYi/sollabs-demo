@@ -13,7 +13,7 @@ function togglePosts(id, checked) {
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    var checkboxes = document.getElementsByClassName('mdl-checkbox__input');
+    var checkboxes = document.getElementsByClassName('mdl-mdl-switch__input');
 
     for(var i = 0; i < checkboxes.length; i++) {
         checkboxes[i].addEventListener('change', function() {
