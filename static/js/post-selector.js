@@ -4,7 +4,7 @@ function togglePosts(id, checked) {
 
     for(var j = 0; j < posts.length; j++) {
         if (checked) {
-            posts[j].style.display = 'block';
+            posts[j].style.display = 'flex';
         } else {
             posts[j].style.display = 'none';
         }
