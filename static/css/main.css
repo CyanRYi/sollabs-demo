@@ -74,6 +74,9 @@ footer {
   float: right;
 }
 /* Layout */
+.sidebar-nav ul {
+    padding-inline-start: 0px;
+}
 .sidebar-nav li {
   margin: 0;
   list-style: none;
@@ -94,10 +97,6 @@ div.content pre {
   border: none;
 }
 /* Left column */
-div.profile-about {
-  margin-top: 10px;
-  color: #8C8C8C;
-}
 img.profile-avatar {
   border-radius: 150px;
   -webkit-border-radius: 150px;
