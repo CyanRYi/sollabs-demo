@@ -24,6 +24,7 @@
 .search__results > li > a {
   display: block;
   padding: 10px;
+    position: absolute;
 }
 .search__result-date {
   color: #BBB;
