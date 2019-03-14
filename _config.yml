@@ -88,7 +88,7 @@ defaults:
       path: ''
       type: posts
     values:
-      layout: post_view
+      layout: post
   - scope:
       path: ''
       type: tag
