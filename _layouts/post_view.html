@@ -17,11 +17,13 @@ layout: default
 {% capture refererUri %}{{ site.url }}{{ page.slug }}{% endcapture %}
 {% include fb_buttons.html %}
 <hr/>
-{% for post in site.posts %}
-    {% if post.slug == page.slug and post.language != page.language %}
-        This article written in <a href="{{ site.url }}{{ post.url }}">{{ post.language }}</a>.
-    {% endif %}
-{% endfor %}
+<ul>
+    {% for post in site.posts %}
+        {% if post.slug == page.slug and post.language != page.language %}
+            <li>The post written in {{ post.language }} is <a href="{{ site.url }}{{ post.url }}"><strong>here</strong></a>.</li>
+        {% endif %}
+    {% endfor %}
+</ul>
 <div class="content">
     <div class="post">{{ content }}</div>
 </div>
