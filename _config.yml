@@ -100,10 +100,6 @@ defaults:
     values:
       layout: category_list
   - scope:
-      type: language
-    values:
-      layout: post_list
-  - scope:
       path: '_posts/en'
     values:
       language: en
