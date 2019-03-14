@@ -107,10 +107,10 @@ defaults:
   - scope:
       path: '_posts/en'
     values:
-      language: en
+      language: English
       permalink: /en/:title
   - scope:
       path: '_posts/ko'
     values:
-      language: ko
+      language: 한국어
 
