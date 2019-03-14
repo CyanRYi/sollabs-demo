@@ -243,39 +243,39 @@ B언어로 번역되는 수준이 낮을수록 전혀 다른 의미가 되는 �
 
 ---
 [^1]: 
-    > [popit - 흔한-프로그래머의-작명에-대한-사뭇-진지한-이야기(안영회)](https://www.popit.kr/%ED%9D%94%ED%95%9C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%9D%98-%EC%9E%91%EB%AA%85%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EB%AD%87-%EC%A7%84%EC%A7%80%ED%95%9C-%EC%9D%B4%EC%95%BC%EA%B8%B0/)  
+    [popit - 흔한-프로그래머의-작명에-대한-사뭇-진지한-이야기(안영회)](https://www.popit.kr/%ED%9D%94%ED%95%9C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%9D%98-%EC%9E%91%EB%AA%85%EC%97%90-%EB%8C%80%ED%95%9C-%EC%82%AC%EB%AD%87-%EC%A7%84%EC%A7%80%ED%95%9C-%EC%9D%B4%EC%95%BC%EA%B8%B0/)  
     [popit - 상태와-이벤트라는-모호한-말이-낳은-결과-찾아내기(안영회)](https://www.popit.kr/%EC%83%81%ED%83%9C%EC%99%80-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%9D%BC%EB%8A%94-%EB%AA%A8%ED%98%B8%ED%95%9C-%EB%A7%90%EC%9D%B4-%EB%82%B3%EC%9D%80-%EA%B2%B0%EA%B3%BC-%EC%B0%BE%EC%95%84%EB%82%B4%EA%B8%B0/)   
     [popit - 함께-그리고-가볍게-하는-소프트웨어-설계의-즐거움(안영회)](https://www.popit.kr/%ED%95%A8%EA%BB%98-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EA%B0%80%EB%B3%8D%EA%B2%8C-%ED%95%98%EB%8A%94-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%84%A4%EA%B3%84%EC%9D%98-%EC%A6%90%EA%B1%B0%EC%9B%80/) 이 글의 방식은 좋은 예시가 아닐까
 
 [^2]: 
-    > 해당 책은 한글로 두번 번역되어 출판되었다. 여기서 참조한 서적은 2017년 재판된 서적이나, 초판은 다른 제목으로 출판된 것으로 알고 있다.
+    해당 책은 한글로 두번 번역되어 출판되었다. 여기서 참조한 서적은 2017년 재판된 서적이나, 초판은 다른 제목으로 출판된 것으로 알고 있다.
 
 [^3]: 
-    > [다음 영한사전 - concise](https://small.dic.daum.net/word/view.do?wordid=ekw000035717&q=concise)
+    [다음 영한사전 - concise](https://small.dic.daum.net/word/view.do?wordid=ekw000035717&q=concise)
 
 [^4]: 
-    > [- oxford English Dictionary - concise](https://en.oxforddictionaries.com/definition/concise)
+    [- oxford English Dictionary - concise](https://en.oxforddictionaries.com/definition/concise)
 
 [^5]: 
-    > ![SI의 (예전)실태](/images/posts/damned_dictionary.PNG)  
+    ![SI의 (예전)실태](/images/posts/damned_dictionary.PNG)  
     무슨 말인지 이해하지 못할 분들도 있을것 같아 첨부하자면, 위 이미지는 내가 SI에 있을때 돌던 용어사전이다.  
     SFTRSC를 보고 Software Resource를 떠올릴 수 있는 사람이 얼마나 될까. 저건 짜임새도 없고, 분명하지도 않다. 그저 '짧을' 뿐.  
     이런데서 개발을 했다 보니, 이런 당연한 주제를 놓고 입에 불을 뿜게 되는 것에 양해를 부탁드린다.
 
 [^6]: 
-    > 물론 한국어만 쓰면서도 이것을 잘 구분 못하는 것이 원인인 경우가 더 많았지만.. 넘어가도록 하자
+    물론 한국어만 쓰면서도 이것을 잘 구분 못하는 것이 원인인 경우가 더 많았지만.. 넘어가도록 하자
 
 [^7]: 
-    > 영영사전을 애용하다 보니 사실 아직도 중역하지 않은 [영한사전](http://www.yes24.com/Product/Goods/3269354?scode=032&OzSrank=1)이 전혀 없는줄 알았다. 아쉽게도 판매는 더이상 하지 않는듯 하다. 한번 보고 싶긴 했는데..
+    영영사전을 애용하다 보니 사실 아직도 중역하지 않은 [영한사전](http://www.yes24.com/Product/Goods/3269354?scode=032&OzSrank=1)이 전혀 없는줄 알았다. 아쉽게도 판매는 더이상 하지 않는듯 하다. 한번 보고 싶긴 했는데..
 
 [^8]: 
-    > 대학때 잠시나마 번역**검수** 알바를 해본 경험으로는.. 우리나라 출판계, 그걸 넘어서 번역에 대한 대우는 매우 짜다.
+    대학때 잠시나마 번역**검수** 알바를 해본 경험으로는.. 우리나라 출판계, 그걸 넘어서 번역에 대한 대우는 매우 짜다.
 
 [^9]: 
-    > 영영사전은 영문만 쓰여 있어 부담스러운건 맞는데.. [papago](https://papago.naver.com/)와 조합해서 써보자.
+    영영사전은 영문만 쓰여 있어 부담스러운건 맞는데.. [papago](https://papago.naver.com/)와 조합해서 써보자.
     아마 저게 '문맥' 가지고 번역한다고 들은것 같다.  
     실제 이 포스팅도 한글제목과 함께 파일명(+링크 주소)으로 쓰는 영문제목을 붙이는데, 동일한 과정을 거치고 있다.
     
 [^10]:
-    > 이건 한국어로 글을 쓸때도 같이 적용되는 방식이다. 유시민 작가, 강원국 작가 등도 비슷한 팁을 말한 적이 있다.  
+    이건 한국어로 글을 쓸때도 같이 적용되는 방식이다. 유시민 작가, 강원국 작가 등도 비슷한 팁을 말한 적이 있다.  
     (위 영영사전에서 thesaurus 탭이 이런 역할을 한다.) 
