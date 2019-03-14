@@ -17,6 +17,11 @@ layout: default
 {% capture refererUri %}{{ site.url }}{{ page.slug }}{% endcapture %}
 {% include fb_buttons.html %}
 <hr/>
+{% for post in site.posts %}
+    {% if post.slug == page.slug and post.language != page.language %}
+        This article written in <a href="{{ site.url }}{{ post.url }}">{{ post.language }}</a>.
+    {% endif %}
+{% endfor %}
 <div class="content">
     <div class="post">{{ content }}</div>
 </div>
