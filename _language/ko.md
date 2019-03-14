@@ -1,4 +1,4 @@
 ---
 type: language
-title : 한국어
+name : ko
 ---

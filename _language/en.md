@@ -1,4 +1,4 @@
 ---
 type: language
-title : English
+name : en
 ---

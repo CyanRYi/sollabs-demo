@@ -74,7 +74,6 @@ urls:
 
 permalink: /:title
 
-# Collections for tags
 collections:
   language:
     output: true
@@ -107,10 +106,10 @@ defaults:
   - scope:
       path: '_posts/en'
     values:
-      language: English
+      language: en
       permalink: /en/:title
   - scope:
       path: '_posts/ko'
     values:
-      language: 한국어
+      language: ko
 
